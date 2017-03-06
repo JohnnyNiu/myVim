@@ -1,5 +1,4 @@
-if [ ! -d ~/.vim/bundle ];then
-	git clone --depth= https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-fi
+rm -rf ~/.vim/bundle
+git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
