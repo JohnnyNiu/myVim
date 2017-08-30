@@ -24,3 +24,17 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 Plugin 'fatih/vim-go'
+Plugin 'sjl/badwolf'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'reedes/vim-colors-pencil'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'Valloric/YouCompleteMe'
+
+
+" some vim settings
+set tabstop=4
