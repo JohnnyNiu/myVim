@@ -35,15 +35,21 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'Valloric/YouCompleteMe'
 
 
-Plugin 'shougo/unite.vim'
-
-" CtrlP
+" CtrlP for file searching
 Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*.so,*.swp,*.zip
 
+"Unite family for file exploring
+Plugin 'shougo/unite.vim'
+"
+" Vimfiler(vimfiler depends on unite.vim)
+Plugin 'shougo/vimfiler.vim'
+:let g:vimfiler_as_default_explorer = 1  " set vimfiler as default file exporer
+:ab vfe VimFilerExplorer
+:ab vf VimFiler
 
 " some vim settings
 set tabstop=4
