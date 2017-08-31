@@ -25,7 +25,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 Plugin 'fatih/vim-go'
 Plugin 'sjl/badwolf'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'itchyny/lightline.vim'
@@ -34,6 +33,16 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'Valloric/YouCompleteMe'
+
+
+Plugin 'shougo/unite.vim'
+
+" CtrlP
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*.so,*.swp,*.zip
 
 
 " some vim settings
