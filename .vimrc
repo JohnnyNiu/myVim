@@ -3,6 +3,7 @@ filetype off                  " required
 
 "General Config
 set splitbelow
+setlocal omnifunc=syntaxcomplete#Complete
 
 
 " set the runtime path to include Vundle and initialize
@@ -94,3 +95,16 @@ let g:vimshell_prompt =  '$ '
 let g:vimshell_popup_height = 20
 " Setup key mapping F12 to open a shell
 :map <F12> :VimShellPop -split <CR>
+
+
+" Code Formatter
+Plugin 'Chiel92/vim-autoformat'
+noremap <F3> :Autoformat<CR>
+"More info about formatter for different language: https://github.com/chiel92/vim-autoformat
+let g:formatterpath = ['/usr/local/bin', '/usr/bin/tidy','/usr/local/go/bin/gofmt']
+
+" Java Complete
+Plugin 'artur-shaik/vim-javacomplete2'
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+
