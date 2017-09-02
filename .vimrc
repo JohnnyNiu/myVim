@@ -1,6 +1,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+"General Config
+set splitbelow
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -32,7 +36,9 @@ Plugin 'reedes/vim-colors-pencil'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'Valloric/YouCompleteMe'
+
+"There is issues when I install YCM on mac
+"Plugin 'Valloric/YouCompleteMe'
 
 
 " CtrlP for file searching
@@ -47,9 +53,44 @@ Plugin 'shougo/unite.vim'
 "
 " Vimfiler(vimfiler depends on unite.vim)
 Plugin 'shougo/vimfiler.vim'
+call vimfiler#custom#profile('default', 'context', {
+            \ 'split': 1,
+            \ 'winwidth' : 40,
+            \ 'no_quit': 1,
+			\ 'explorer': 1
+            \ })
+
 :let g:vimfiler_as_default_explorer = 1  " set vimfiler as default file exporer
 :ab vfe VimFilerExplorer
 :ab vf VimFiler
+"Run VimFilerExplore When opening a directory
+
+
+"Before using any plugin for auto complete, I want to try vim's vaniala autocomplete
+"Plugin 'shougo/neocomplete.vim'
+"let g:neocomplete#enable_at_startup = 1
+
+"
 
 " some vim settings
 set tabstop=4
+
+" Markdown config
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
+
+" Parenthesis
+Plugin 'tpope/vim-surround'
+Plugin 'townk/vim-autoclose'
+
+" Shell 
+" Todo: You need to compile vimproc manually: `cd ~/.vim/bundle/vimproc.vim && make
+Plugin 'shougo/vimproc.vim'
+Plugin 'shougo/vimshell.vim'
+let g:vimshell_split_command = 'split'
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_prompt =  '$ '
+let g:vimshell_popup_height = 20
+" Setup key mapping F12 to open a shell
+:map <F12> :VimShellPop -split <CR>
