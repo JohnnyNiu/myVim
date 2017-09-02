@@ -62,10 +62,7 @@ call vimfiler#custom#profile('default', 'context', {
             \ })
 
 :let g:vimfiler_as_default_explorer = 1  " set vimfiler as default file exporer
-:ab vfe VimFilerExplorer
-:ab vf VimFiler
-"Run VimFilerExplore When opening a directory
-
+:let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
 "Before using any plugin for auto complete, I want to try vim's vaniala autocomplete
 "Plugin 'shougo/neocomplete.vim'
