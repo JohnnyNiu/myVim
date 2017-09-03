@@ -74,8 +74,8 @@ call vimfiler#custom#profile('default', 'context', {
 :let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
 "Before using any plugin for auto complete, I want to try vim's vaniala autocomplete
-"Plugin 'shougo/neocomplete.vim'
-"let g:neocomplete#enable_at_startup = 1
+Plugin 'shougo/neocomplete.vim'
+let g:neocomplete#enable_at_startup = 1
 
 "
 
