@@ -47,6 +47,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'dhruvasagar/vim-table-mode'
 
+"git plugin
+Plugin 'tpope/vim-fugitive'
+
 "There is issues when I install YCM on mac
 "Plugin 'Valloric/YouCompleteMe'
 
@@ -88,8 +91,9 @@ Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1
 
 " Parenthesis
-Plugin 'tpope/vim-surround'
-Plugin 'townk/vim-autoclose'
+"Plugin 'tpope/vim-surround'
+"Plugin 'townk/vim-autoclose'
+Plugin 'jiangmiao/auto-pairs'
 
 " Shell 
 " Todo: You need to compile vimproc manually: `cd ~/.vim/bundle/vimproc.vim && make
